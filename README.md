@@ -2,7 +2,7 @@
 
 BitArray is based on the Ruby library BitArray by Peter Cooper (https://github.com/peterc/bitarray).
 
-Basic, pure Ruby bit field. 
+Basic, pure JavaScript bit field. 
 
 ## Examples
 
