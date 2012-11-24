@@ -1,5 +1,8 @@
+"use strict";
+
 function BitArray(size, value){
-  if(value === undefined) value = 0;
+  if (typeof this === 'undefined') return new BitArray(size, value);
+  if (typeof value === 'undefined') value = 0;
   this.size = size;
   this.field = new Array(~~((size - 1) / BitArray.ELEMENT_WIDTH) + 1);
   for(var i = 0; i < this.field.length; i++) 
@@ -36,3 +39,6 @@ BitArray.prototype.toString = function(){
   }).reverse().join('');
   return string.split('').reverse().join('').slice(0,this.size);
 }
+
+if (typeof module != 'undefined')
+  module.exports = BitArray;

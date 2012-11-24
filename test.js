@@ -1,18 +1,30 @@
-var fs = require('fs'), filedata = fs.readFileSync('bitarray.js','utf8');
-eval(filedata);
+var assert = require('better-assert');
+var BitArray = require('./');
 
-var ba = new BitArray(200);
-ba.set(100, 1);
-console.log(ba.field);
-console.log(ba.get(100), 'should be 1');
+describe('a bit array of length 200', function () {
+  var ba = BitArray(200);
+  it('lets you set a value to 1', function () {
+    ba.set(100, 1);
+    assert(ba.get(100) === 1);
+  });
+  it('lets you set that value back to 0', function () {
+    ba.set(100, 0);
+    assert(ba.get(100) === 0);
+  });
+});
 
-ba.set(100, 0);
-console.log(ba.get(100), 'should be 0');
+describe('a bit array of length 20', function () {
+  it('lets you set lots of values independently', function () {
+    var ba = BitArray(20);
+    [1,3,5,9,11,13,15].forEach(function(i){ ba.set(i, 1) });
+    assert(ba.toString() === '01010100010101010000');
+  });
+});
 
-ba = new BitArray(20);
-[1,3,5,9,11,13,15].forEach(function(i){ ba.set(i, 1) });
-console.log(ba.toString() == '01010100010101010000', 'should be true');
-
-ba = new BitArray(33,1);
-[0].forEach(function(i){ ba.set(i, 0) });
-console.log(ba.toString() == '011111111111111111111111111111111', 'should be true');
+describe('a bit array with a default of 1', function () {
+  it('lets you set a bit to 0', function () {
+    var ba = BitArray(33,1);
+    ba.set(0, 0)
+    assert(ba.toString() == '011111111111111111111111111111111');
+  });
+});

@@ -1,0 +1,19 @@
+{
+  "name": "bitarray",
+  "version": "1.0.0",
+  "description": "Pure JavaScript bit array/bitfield implementation",
+  "main": "./bitarray.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/bitarray.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*",
+    "better-assert": "*"
+  },
+  "dependencies": {}
+}

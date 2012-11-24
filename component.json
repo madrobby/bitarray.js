@@ -1,0 +1,15 @@
+{
+  "name": "bitarray",
+  "repo": "microjs/bitarray",
+  "description": "Pure JavaScript bit array/bitfield implementation",
+  "version": "1.0.0",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "bitarray.js"
+  ],
+  "main": "bitarray.js",
+  "twitter": "@ForbesLindesay",
+  "license": "MIT"
+}
