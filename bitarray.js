@@ -40,4 +40,5 @@ BitArray.prototype.toString = function(){
   return string.split('').reverse().join('').slice(0,this.size);
 }
 
-module.exports = BitArray;
+if (typeof module != 'undefined')
+  module.exports = BitArray;
