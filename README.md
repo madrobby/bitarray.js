@@ -1,9 +1,21 @@
 [![Build Status](https://secure.travis-ci.org/microjs/bitarray.png?branch=master)](https://travis-ci.org/microjs/bitarray)
-# BitArray: A simple bit array/bit field library in pure JavaScript
+# BitArray
+
+BitArray is a simple bit array/bit field library in pure JavaScript
 
 BitArray is based on the Ruby library BitArray by Peter Cooper (https://github.com/peterc/bitarray).
 
-Basic, pure JavaScript bit field. 
+Basic, pure JavaScript bit field.
+
+## Installation
+
+Server:
+
+    $ npm install bitarray
+
+Client:
+
+    $ component install microjs/bitarray
 
 ## Examples
 
@@ -20,10 +32,17 @@ ba.set(100, 1);
 ba.get(100); // => 1
 
 ba.set(100, 0);
-ba.get(100); // = > 0
+ba.get(100); // => 0
 ```
 
-More:
+Create a BitArray where all the bits default to 1:
+
+```javascript
+var ba = new BitArray(100, 1);
+ba.get(50); // => 1
+```
+
+toString:
 
 ```javascript
 var ba = new BitArray(20);
