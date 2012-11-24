@@ -1,6 +1,6 @@
 {
-  "name": "bitarray.js",
-  "repo": "microjs/bitarray.js",
+  "name": "bitarray",
+  "repo": "microjs/bitarray",
   "description": "Pure JavaScript bit array/bitfield implementation",
   "version": "0.0.1",
   "keywords": [],

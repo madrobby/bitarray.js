@@ -1,5 +1,3 @@
-"use strict";
-
 function BitArray(size, value){
   if (typeof this === undefined) return new BitArray(size, value);
   if (value === undefined) value = 0;
