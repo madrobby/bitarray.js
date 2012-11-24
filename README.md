@@ -1,3 +1,4 @@
+[![Build Status](https://secure.travis-ci.org/microjs/bitarray.png?branch=master)](https://travis-ci.org/microjs/bitarray)
 # BitArray: A simple bit array/bit field library in pure JavaScript
 
 BitArray is based on the Ruby library BitArray by Peter Cooper (https://github.com/peterc/bitarray).
